@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이력서</title>
+    <link rel="stylesheet" href="./css/layout2.css" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      thead {
+        background-color: deepskyblue;
+      }
+
+      #part {
+        margin: 0 auto;
+        width: 80%; /* 기본 폭 */
+        border-collapse: collapse;
+      }
+
+      tbody tr:hover {
+        background-color: #53429e;
+        color: white;
+      }
+
+      .custom-hr {
+        height: 15px;
+        border: none;
+      }
+
+      #part colgroup col:nth-child(1) {
+        width: 10%;
+      }
+      #part colgroup col:nth-child(2) {
+        width: 50%;
+      }
+      #part colgroup col:nth-child(3) {
+        width: 25%;
+      }
+      #part colgroup col:nth-child(4) {
+        width: 15%;
+      }
+
+      .left-align {
+        text-align: left;
+      }
+
+      /* 🖥️ PC 화면 (width ≥ 1024px) */
+      @media (min-width: 1024px) {
+        #part {
+          width: 80%;
+          font-size: 1rem;
+        }
+      }
+
+      /* 📱 태블릿 화면 (768px ≤ width < 1024px) */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #part {
+          width: 95%;
+          font-size: 0.95rem;
+        }
+        td {
+          padding: 8px;
+        }
+      }
+
+      /* 📱 모바일 화면 (width < 768px) */
+      @media (max-width: 767px) {
+        #part {
+          width: 100%;
+          font-size: 0.85rem;
+        }
+        thead {
+          display: none; /* 모바일에서는 헤더 숨기고 카드형으로 */
+        }
+        #part,
+        #part tbody,
+        #part tr,
+        #part td {
+          display: block;
+          width: 100%;
+        }
+        #part tr {
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          padding: 10px;
+          background: #f9f9f9;
+        }
+        #part td {
+          text-align: left;
+          padding: 5px 10px;
+          border: none;
+        }
+        #part td::before {
+          font-weight: bold;
+          display: block;
+          margin-bottom: 3px;
+        }
+        #part td:nth-child(1)::before {
+          content: "순번";
+        }
+        #part td:nth-child(2)::before {
+          content: "참여사업명";
+        }
+        #part td:nth-child(3)::before {
+          content: "수행기간";
+        }
+        #part td:nth-child(4)::before {
+          content: "수행업무";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>나의 이력</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">메인</a></li>
+        <li><a href="이력서.html">이력서</a></li>
+        <li><a href="자주가는사이트.html">자주가는 사이트</a></li>
+        <li><a href="연락처.html">연락처</a></li>
+      </ul>
+    </nav>
+
+    <hr class="custom-hr" />
+    <table id="part">
+      <colgroup>
+        <col />
+        <col />
+        <col />
+        <col />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>순번</th>
+          <th>참여사업명</th>
+          <th>수행기간</th>
+          <th>수행업무</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="left-align">스타필드 운영정보 멤버십 서비스 개발</td>
+          <td>2025.02.03 ~ 2025.08.02</td>
+          <td>분석,설계,개발</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="left-align">
+            서울대학교 중앙도서관 빅데이터 기반 지식정보 플랫폼 구축 3차년도
+          </td>
+          <td>2024.08.05 ~ 2025.01.31</td>
+          <td>분석,개발</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="left-align">신세계인터내셔날 쇼핑몰 배송연계 구축 개발</td>
+          <td>2023.11.14 ~ 2024.04.13</td>
+          <td>개발</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="left-align">롯데 하노이 떠이호 영업시스템 구축</td>
+          <td>2023.07.01 ~ 2023.09.25</td>
+          <td>개발</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="left-align">롯데 하노이 떠이호 영업시스템 구축</td>
+          <td>2023.01.03 ~ 2023.06.30</td>
+          <td>개발</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td class="left-align">한화 신 인사제도 솔루션 구축</td>
+          <td>2022.05.01 ~ 2022.11.30</td>
+          <td>개발</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td class="left-align">
+            에듀테크 연구소 응용소프트웨어 제품 개발(한국열린사이버대학교
+            홈페이지 개선작업)
+          </td>
+          <td>2022.01.03 ~ 2022.03.31</td>
+          <td>개발</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td class="left-align">메디오피아테크 솔루션 개발(LMS시스템)</td>
+          <td>2021.05.03 ~ 2021.12.31</td>
+          <td>개발</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td class="left-align">롯데멤버스 APP 통합 프로젝트</td>
+          <td>2020.12.01 ~ 2021.03.10</td>
+          <td>개발</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td class="left-align">LG 사이트 개편 개발 업무(LG모바일스토리)</td>
+          <td>2020.08.03 ~ 2020.10.15</td>
+          <td>개발</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: GMarketSans;
+  line-height: 1.6;
+}
+
+header,
+nav,
+main,
+section,
+article,
+aside,
+footer {
+  padding: 20px;
+}
+
+header {
+  background-color: rgb(0, 255, 149);
+  text-align: center;
+}
+
+nav {
+  background-color: #555;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap; /* 작은 화면에서 줄바꿈 허용 */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+section {
+  background-color: ivory;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+article h2 {
+  margin-bottom: 10px;
+}
+
+aside {
+  background-color: #fefbd8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* 🖥️ PC 화면 (width ≥ 1024px) */
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 3fr 1fr; /* 기본 2단 구조 */
+  }
+  nav ul {
+    gap: 50px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* 📱 태블릿 화면 (768px ≤ width < 1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    grid-template-columns: 2fr 1fr; /* 비율 조정 */
+  }
+  nav ul {
+    gap: 30px;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 📱 모바일 화면 (width < 768px) */
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr; /* 본문과 사이드바 세로 배치 */
+  }
+  aside {
+    margin-top: 20px; /* 사이드바를 본문 아래로 */
+  }
+  nav ul {
+    flex-direction: column; /* 메뉴 세로 배치 */
+    align-items: center;
+    gap: 15px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  section,
+  aside {
+    padding: 10px; /* 여백 줄여서 공간 확보 */
+  }
+}
+
+/* 기본 네비게이션 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #555;
+  padding: 10px 20px;
+  color: white;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 모바일 전용 */
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .nav-menu {
+    display: none; /* 기본적으로 숨김 */
+    flex-direction: column;
+    background: #555;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex; /* 토글 시 표시 */
+  }
+
+  .nav-toggle {
+    display: block; /* 모바일에서만 버튼 표시 */
+  }
+}

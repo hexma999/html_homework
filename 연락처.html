@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연락처</title>
+    <link rel="stylesheet" href="./css/layout2.css" />
+    <style>
+      .contact-container {
+        background-color: ivory;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: 40px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-container h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .contact-list li {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #444;
+      }
+
+      .contact-list a {
+        color: #0078d4;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .contact-list a:hover {
+        text-decoration: underline;
+      }
+
+      /* 🖥️ PC 화면 (width ≥ 1024px) */
+      @media (min-width: 1024px) {
+        .contact-container {
+          max-width: 700px;
+          font-size: 1rem;
+        }
+      }
+
+      /* 📱 태블릿 화면 (768px ≤ width < 1024px) */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .contact-container {
+          max-width: 90%;
+          font-size: 0.95rem;
+          padding: 20px;
+        }
+        .contact-container h2 {
+          font-size: 22px;
+        }
+      }
+
+      /* 📱 모바일 화면 (width < 768px) */
+      @media (max-width: 767px) {
+        .contact-container {
+          max-width: 100%;
+          font-size: 0.9rem;
+          padding: 15px;
+          margin: 20px auto;
+        }
+        .contact-container h2 {
+          font-size: 20px;
+        }
+        .contact-list li {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>연락처</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">메인</a></li>
+        <li><a href="이력서.html">이력서</a></li>
+        <li><a href="자주가는사이트.html">자주가는 사이트</a></li>
+        <li><a href="연락처.html">연락처</a></li>
+      </ul>
+    </nav>
+
+    <div class="contact-container">
+      <h2>📞 연락처</h2>
+      <ul class="contact-list">
+        <li>
+          <strong>이메일:</strong>
+          <a href="mailto:hexma999@naver.com">hexma999@naver.com</a>
+        </li>
+        <li>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/yourusername" target="_blank"
+            >https://github.com/yourusername</a
+          >
+        </li>
+        <li>
+          <strong>블로그:</strong>
+          <a href="https://blog.naver.com/hexma999" target="_blank"
+            >https://blog.naver.com/hexma999</a
+          >
+        </li>
+        <li>
+          <strong>LinkedIn:</strong>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"
+            >https://linkedin.com/in/yourprofile</a
+          >
+        </li>
+        <li><strong>전화번호:</strong> 010-1234-5678</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>Copyright &copy; 2025 My Website</p>
+    </footer>
+  </body>
+</html>

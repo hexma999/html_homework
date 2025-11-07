@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자주 가는 사이트</title>
+    <link rel="stylesheet" href="./css/layout2.css" />
+    <style>
+      .title {
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .site-list {
+        list-style: none;
+        padding: 0;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .site-item {
+        background-color: #ffffff;
+        margin: 10px 0;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .site-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .site-link {
+        text-decoration: none;
+        color: #0078d4;
+        font-weight: bold;
+      }
+
+      .site-link:hover {
+        text-decoration: underline;
+      }
+
+      /* 🖥️ PC 화면 (width ≥ 1024px) */
+      @media (min-width: 1024px) {
+        .site-list {
+          max-width: 800px;
+        }
+        .site-item {
+          font-size: 1rem;
+        }
+      }
+
+      /* 📱 태블릿 화면 (768px ≤ width < 1024px) */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .site-list {
+          max-width: 90%;
+        }
+        .site-item {
+          font-size: 0.95rem;
+          padding: 12px 15px;
+        }
+      }
+
+      /* 📱 모바일 화면 (width < 768px) */
+      @media (max-width: 767px) {
+        .site-list {
+          max-width: 100%;
+          padding: 0 10px;
+        }
+        .site-item {
+          font-size: 0.9rem;
+          padding: 10px 12px;
+        }
+        .title {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>자주 가는 사이트</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">메인</a></li>
+        <li><a href="이력서.html">이력서</a></li>
+        <li><a href="자주가는사이트.html">자주가는 사이트</a></li>
+        <li><a href="연락처.html">연락처</a></li>
+      </ul>
+    </nav>
+
+    <h2 class="title">즐겨찾는 웹사이트 모음</h2>
+    <ul class="site-list">
+      <li class="site-item">
+        <a class="site-link" href="https://www.kyobobook.co.kr/" target="_blank"
+          >교보문고</a
+        >
+      </li>
+      <li class="site-item">
+        <a class="site-link" href="https://www.aladin.co.kr/" target="_blank"
+          >알라딘</a
+        >
+      </li>
+      <li class="site-item">
+        <a class="site-link" href="https://www.youtube.com" target="_blank"
+          >유튜브</a
+        >
+      </li>
+      <li class="site-item">
+        <a class="site-link" href="https://www.github.com" target="_blank"
+          >깃허브</a
+        >
+      </li>
+      <li class="site-item">
+        <a
+          class="site-link"
+          href="https://www.stackoverflow.com"
+          target="_blank"
+          >스택오버플로우</a
+        >
+      </li>
+    </ul>
+
+    <footer>
+      <p>Copyright &copy; 2025 My Website</p>
+    </footer>
+  </body>
+</html>

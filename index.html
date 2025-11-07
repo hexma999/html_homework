@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인</title>
+    <link rel="stylesheet" href="./css/layout.css" />
+
+    <style>
+      aside {
+        background-image: url("images/onehee.png"); /* 이미지 경로 */
+        background-size: cover; /* 이미지가 영역을 꽉 채우도록 */
+        background-position: center; /* 가운데 정렬 */
+        padding: 20px;
+        color: white; /* 텍스트 색상 */
+        border-radius: 8px;
+        position: relative; /* 오버레이 추가를 위해 relative */
+        min-height: 200px; /* 최소 높이 확보 */
+        display: flex; /* 내용 중앙 정렬 */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* 배경 위에 반투명 오버레이 추가 */
+      aside::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4); /* 어두운 반투명 레이어 */
+        border-radius: 8px;
+      }
+
+      /* 실제 텍스트는 오버레이 위에 표시 */
+      aside > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* 🖥️ PC 화면 (width ≥ 1024px) */
+      @media (min-width: 1024px) {
+        aside {
+          min-height: 300px; /* 큰 화면에서는 높이를 넉넉하게 */
+          font-size: 1.1rem;
+        }
+      }
+
+      /* 📱 태블릿 화면 (768px ≤ width < 1024px) */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        aside {
+          min-height: 250px; /* 태블릿에서는 중간 크기 */
+          font-size: 1rem;
+          padding: 15px;
+        }
+      }
+
+      /* 📱 모바일 화면 (width < 768px) */
+      @media (max-width: 767px) {
+        aside {
+          min-height: 200px; /* 모바일에서는 최소 높이 */
+          font-size: 0.9rem;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>개인 홈페이지에 오신것을 환영합니다.</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">메인</a></li>
+        <li><a href="이력서.html">이력서</a></li>
+        <li><a href="자주가는사이트.html">자주가는 사이트</a></li>
+        <li><a href="연락처.html">연락처</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <article>
+          <h2>자기소개</h2>
+          <p>안녕하세요.권경수입니다.</p>
+        </article>
+        <article>
+          <h2>인사말</h2>
+          <p>만나서 반갑습니다.</p>
+        </article>
+      </section>
+      <aside></aside>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2025 My Website</p>
+    </footer>
+  </body>
+</html>
